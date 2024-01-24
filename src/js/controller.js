@@ -104,12 +104,16 @@ const controlRecipeUpload = async function(newRecipe){
   }
 }
 
-addRecipeView.handleUploadBtnClick(controlRecipeUpload)
-searchView.addHandlerSearch(controlSearchResults);
-recipeView.addEventHandlers(controlRecipes);
-recipeView.addBookmarkClickHandler(controlBookmarkClick);
-recipeView.addUpdateServingsHandler(controlServings);
-paginationView.addEventHandlers(controlPagination);
+const init = function(){
+  addRecipeView.handleUploadBtnClick(controlRecipeUpload)
+  searchView.addHandlerSearch(controlSearchResults);
+  recipeView.addEventHandlers(controlRecipes);
+  recipeView.addBookmarkClickHandler(controlBookmarkClick);
+  recipeView.addUpdateServingsHandler(controlServings);
+  paginationView.addEventHandlers(controlPagination);
+}
+
+init();
 
 if(model.state.bookmarks.length)
   bookmarksView.render(model.state.bookmarks);
