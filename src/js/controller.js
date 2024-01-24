@@ -111,7 +111,6 @@ const init = function(){
   recipeView.addBookmarkClickHandler(controlBookmarkClick);
   recipeView.addUpdateServingsHandler(controlServings);
   paginationView.addEventHandlers(controlPagination);
-  console.log('CI/CD is working !!')
 }
 
 init();
